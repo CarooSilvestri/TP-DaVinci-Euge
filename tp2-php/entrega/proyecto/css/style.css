@@ -1,0 +1,56 @@
+.main-content {
+	min-height: 900px;
+}
+
+.main-footer {
+	height: 75px;
+	background-color: #ccc;
+	color: #fefefe;
+	line-height: 75px;
+	text-align: center;
+}
+
+.main-footer p {
+	margin-bottom: 0;
+}
+
+.fondo {
+	background: black;
+}
+
+.sup {
+	margin-top: 20px;
+}
+
+.text {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.tarc {
+	color: black;
+	text-align: cente
+}
+
+.taryo {
+	text-align: left;
+	color: black;
+}
+
+.tar{
+	width: 350px;
+	margin: 50px auto;
+	color: lightgrey;
+}
+
+.fototar {
+	width: 250px;
+	justify-content: center;
+	margin: 20px auto;
+}
+
+.centrar {
+	margin: auto;
+}

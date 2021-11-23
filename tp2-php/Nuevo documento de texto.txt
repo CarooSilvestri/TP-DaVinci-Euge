@@ -1,0 +1,7 @@
+-Imagen de datos de alumno y contraste
+sacar contacto
+agregar padding sup arriba de todo
+-El HTML esta en EN y no ES
+-En bar quedaron dos DIV sin cerrar
+-El archivo Bares.php sacarle la mayuscula
+-
