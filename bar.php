@@ -37,7 +37,7 @@
             <div class="col-sm-12 col-md-6">
                 <div class="d-flex justify-content-around">
                     <p class="upper"><b>Ubicacion:</b><br> <?= $bar [2]?> </p>
-                    <p><b>Estrellas:</b><br> <?= include "parciales/estrellas.php" ?></p>
+                    <p><b>Estrellas:</b><br> <?= require "parciales/estrellas.php" ?></p>
                     <p class="upper"><b>Comida:</b><br> <?= $bar [4]?></p>
                 </div>
                 <p><b>Descripción del Bar:</b><br> <?= $bar[5]?></p>

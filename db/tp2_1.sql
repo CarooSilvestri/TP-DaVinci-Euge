@@ -145,14 +145,14 @@ INSERT INTO `usuarios` (`id_usuario`, `Usuario`, `Contrasena`) VALUES
 --
 ALTER TABLE `bar`
   ADD PRIMARY KEY (`id_bar`),
-  ADD UNIQUE KEY `nobre_unique` (`name`);
+  ADD UNIQUE KEY `nombre_unique` (`name`);
 
 --
 -- Indices de la tabla `barman`
 --
 ALTER TABLE `barman`
   ADD PRIMARY KEY (`id_barman`),
-  ADD KEY `apellido_idex` (`apellido`),
+  ADD KEY `apellido_index` (`apellido`),
   ADD KEY `nombre_index` (`nombre`);
 
 --

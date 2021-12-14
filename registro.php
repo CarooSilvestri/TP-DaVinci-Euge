@@ -2,7 +2,7 @@
 
 <div class="container-fluid" id="registro">
 
-    <div class="d-flex flex-row justify-content-between titulo">
+    <div class="d-flex flex-row justify-content-around titulo">
         <hr class="align-self-center">
         <h1>Registro</h1>
         <hr class="align-self-center">
