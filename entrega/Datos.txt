@@ -1,8 +1,0 @@
-Alumno: Mariano Schicht
-Profesor: Santiago Gallino
-Materia: Programación Visual III
-Caracter de Entrega: Segundo TP
-Cuantrimestre: 4
-Año: 2020
-Carrera: Diseño Multimedial
-Comisión: DMM4A

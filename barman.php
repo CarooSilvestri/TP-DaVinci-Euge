@@ -1,33 +1,43 @@
 <?php
-require 'funciones/conexion.php';
-$consulta = 'SELECT * FROM barman';
-$resultados = mysqli_query($conexionDB, $consulta);
-require 'parciales/header.php';
-
+     // traigo el header
+    require 'parciales/header.php';
+    $consulta_barman = 'SELECT * FROM barman';
+    $resultados_barman = mysqli_query($conexionDB, $consulta_barman);
+    // Pido una sola vez la de bares
+    $consulta_bar = 'SELECT * FROM bar';
+    $resultados_bar = mysqli_query($conexionDB, $consulta_bar);
+   
 ?>
-<div class="container">
-    <div class="row">
-<?php
-foreach($resultados as $barman){;
-?>
-    <div class="col-4 sup">
-        <div class="card tarjeta-color tar">
 
+<div class="container-fluid" id="barmans">
 
-
-    <img class="card-img-top rounded-circle fototar img-fluid" src="<?="img/".$barman['imgs']?>" alt="<?=$barman['nombre']." ".$barman['apellido']?>">
-        
-
-
-
-        <div class="card-body ">
-        <h4 class="card-title tarcol h3"><?= $barman['nombre'] . " " . $barman['apellido']?></h4>
-        <p class="card-text tarcol text-secondary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, numquam? Ipsa cumque ut nulla dolore eius asperiores ipsam, labore tempora. Sequi unde incidunt quas id magnam corrupti dolore recusandae sed?</p>
+    <div class="d-flex flex-row justify-content-between titulo">
+        <hr class="align-self-center">
+        <h1>Barmans</h1>
+        <hr class="align-self-center">
     </div>
-  </div>
+
+    <div class="row justify-content-center">
+        
+        <?php foreach($resultados_barman as $barman){ ?>
+            <div class="col-sm-12 col-md-6 col-lg-3 col-card">
+                <div class="card d-flex flex-column">
+                    <img class="card-img-top img-fluid" 
+                        src="<?="img/".$barman['imgs']?>" 
+                        alt="<?=$barman['nombre']." ".$barman['apellido']?>">
+                    <div class="card-body mb-auto">
+                        <h4 class="card-title"><?= $barman['nombre'] . " " . $barman['apellido']?></h4>
+                        <p class="card-text text-secondary"><?= $barman['descripcion']?></p>
+                        <div class="datos">
+                            <p><b>Edad:</b> <?= $barman['edad']?></p>
+                            <p><b>Especialidad:</b> <?= $barman['especialidad']?></p>
+                            <p><b>Encontralo en:</b> <?php include "parciales/cargar_barman_en_bar.php"?></p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        <?php } ?>
+    </div> 
 </div>
 
-<?php
-}
-?>
-</div> 
+<?php require 'parciales/footer.php';?>
